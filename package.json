@@ -1,0 +1,29 @@
+{
+  "name": "google-analytics-connector",
+  "version": "1.0.0",
+  "description": "google analytics connector for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aecom-oakland-dms/google-analytics-connector.git"
+  },
+  "keywords": [
+    "google",
+    "node",
+    "analytics",
+    "google",
+    "analytics"
+  ],
+  "author": "ben kane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aecom-oakland-dms/google-analytics-connector/issues"
+  },
+  "homepage": "https://github.com/aecom-oakland-dms/google-analytics-connector#readme",
+  "dependencies": {
+    "googleanalytics": "^0.3.7"
+  }
+}
