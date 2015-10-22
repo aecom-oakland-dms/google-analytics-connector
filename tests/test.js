@@ -16,6 +16,7 @@ let jwtClient = new google.auth.JWT(
 	  ,['https://www.googleapis.com/auth/analytics.readonly']
 	  , null
 );
+
 jwtClient.authorize(function (err, tokens) {
   if (err) {
     console.log(err);
@@ -27,15 +28,15 @@ jwtClient.authorize(function (err, tokens) {
 
 function queryData(analytics) {
   analytics.data.ga.get({
-    'auth': jwtClient,
-    'ids': VIEW_ID,
-    'metrics': 'ga:uniquePageviews',
-    'dimensions': 'ga:pagePath',
-    'start-date': '30daysAgo',
-    'end-date': 'yesterday',
-    'sort': '-ga:uniquePageviews',
-    'max-results': 10,
-    'filters': raw`ga:pagePath=~/ch_[-a-z0-9]+\.html$`,
+    'auth': jwtClient
+    , 'ids': VIEW_ID
+    , 'metrics': 'ga:pageviews'
+    , 'start-date': '2015-01-01'
+    , 'end-date': 'today'
+    // , 'dimensions': 'ga:pagePath'
+    // , 'sort': '-ga:pageviews',
+    // , 'max-results': 10,
+    // , 'filters': raw`ga:pagePath=~/ch_[-a-z0-9]+\.html$`,
   }, function (err, response) {
     if (err) {
       console.log(err);
