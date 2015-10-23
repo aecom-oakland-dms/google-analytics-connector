@@ -4,7 +4,6 @@ let google =  require('googleapis')
 , key = require('../../dwr-lep.key')
 ;
 
-console.log(key);
 
 const raw = String.raw;
 const VIEW_ID = 'ga:97455722';
